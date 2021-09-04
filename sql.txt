@@ -1,0 +1,31 @@
+MariaDB [hotel]> describe hotel;
++----------+--------------+------+-----+---------+-------+
+| Field    | Type         | Null | Key | Default | Extra |
++----------+--------------+------+-----+---------+-------+
+| id       | varchar(255) | NO   | PRI | NULL    |       |
+| location | varchar(255) | YES  |     | NULL    |       |
+| name     | varchar(255) | YES  |     | NULL    |       |
++----------+--------------+------+-----+---------+-------+
+3 rows in set (0.01 sec)
+
+MariaDB [hotel]> describe Room;
++------------+--------------+------+-----+---------+-------+
+| Field      | Type         | Null | Key | Default | Extra |
++------------+--------------+------+-----+---------+-------+
+| room_no    | varchar(255) | NO   | PRI | NULL    |       |
+| class_type | varchar(255) | YES  |     | NULL    |       |
+| location   | varchar(255) | YES  |     | NULL    |       |
+| h_id       | varchar(255) | YES  | MUL | NULL    |       |
++------------+--------------+------+-----+---------+-------+
+4 rows in set (0.01 sec)
+
+MariaDB [hotel]> describe room_type;
++-----------+--------------+------+-----+---------+-------+
+| Field     | Type         | Null | Key | Default | Extra |
++-----------+--------------+------+-----+---------+-------+
+| type_id   | varchar(255) | NO   | PRI | NULL    |       |
+| type_name | varchar(255) | YES  |     | NULL    |       |
+| facility  | varchar(255) | YES  |     | NULL    |       |
+| h_id      | varchar(255) | YES  | MUL | NULL    |       |
++-----------+--------------+------+-----+---------+-------+
+4 rows in set (0.01 sec)
